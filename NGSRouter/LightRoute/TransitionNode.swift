@@ -149,8 +149,15 @@ public final class TransitionNode<T>: GenericTransitionNode<T> {
     ///
     /// - Parameter navigationController: Navigation controller that should be embed
     ///
-    public func embedInNavigationController(_ navigationController: UINavigationController?) -> TransitionNode<T> {
-        if let destination = self.destination, let navController = navigationController {
+    public func embedInNavigationController(_ navigationController: UINavigationController?,
+                                            style: TransitionStyle) -> TransitionNode<T> {
+        if case .navigation = style {
+            return self
+        }
+        if let destination = self.destination,
+           !(destination is UINavigationController),
+           destination.navigationController == nil,
+           let navController = navigationController {
             navController.viewControllers = [destination]
             self.destination = navController
         }

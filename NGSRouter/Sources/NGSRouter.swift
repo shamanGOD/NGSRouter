@@ -144,7 +144,7 @@ open class NGSRouter: NGSRouterType {
             try getTransitionNode(destination: Destination.self)
                 .applyConfigurator(navigatable: Destination.self)
                 .selector(selectorName)
-                .embedInNavigationController(navigationController)
+                .embedInNavigationController(navigationController, style: typeNavigation.transtionStyle)
                 .to(preferred: typeNavigation.transtionStyle)
                 .transition(animate: animated)
                 .then({ $0.prepare() })
@@ -160,7 +160,7 @@ open class NGSRouter: NGSRouterType {
             try getTransitionNode(destination: Destination.self)
                 .applyConfigurator(navigatable: Destination.self)
                 .selector(selectorName)
-                .embedInNavigationController(navigationController)
+                .embedInNavigationController(navigationController, style: typeNavigation.transtionStyle)
                 .to(preferred: typeNavigation.transtionStyle)
                 .transition(animate: animated)
                 .then({
@@ -180,7 +180,7 @@ open class NGSRouter: NGSRouterType {
             try getTransitionNode(destination: Destination.self)
                 .applyConfigurator(navigatable: Destination.self)
                 .selector(selectorName)
-                .embedInNavigationController(navigationController)
+                .embedInNavigationController(navigationController, style: typeNavigation.transtionStyle)
                 .to(preferred: typeNavigation.transtionStyle)
                 .transition(animate: animated)
                 .then({
@@ -201,7 +201,7 @@ open class NGSRouter: NGSRouterType {
             try getTransitionNode(destination: Destination.self)
                 .applyConfigurator(navigatable: Destination.self)
                 .selector(selectorName)
-                .embedInNavigationController(navigationController)
+                .embedInNavigationController(navigationController, style: typeNavigation.transtionStyle)
                 .to(preferred: typeNavigation.transtionStyle)
                 .transition(animate: animated)
                 .then({
