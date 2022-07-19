@@ -172,7 +172,7 @@ public extension NGSRouterType {
         
         self.navigate(
             to: Destination.self,
-            navigationController: nil,
+            navigationController: navigationController,
             typeNavigation: typeNavigation,
             animated: animated
         )
@@ -198,7 +198,7 @@ public extension NGSRouterType {
         
         self.navigate(
             to: Destination.self,
-            navigationController: nil,
+            navigationController: navigationController,
             parameter: parameter,
             typeNavigation: typeNavigation,
             animated: animated
@@ -225,7 +225,7 @@ public extension NGSRouterType {
         
         self.navigate(
             to: Destination.self,
-            navigationController: nil,
+            navigationController: navigationController,
             typeNavigation: typeNavigation,
             animated: animated,
             closeCompletion: closeCompletion
@@ -254,7 +254,7 @@ public extension NGSRouterType {
         
         self.navigate(
             to: Destination.self,
-            navigationController: nil,
+            navigationController: navigationController,
             parameter: parameter,
             typeNavigation: typeNavigation,
             animated: animated,
